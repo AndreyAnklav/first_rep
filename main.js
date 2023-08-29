@@ -101,7 +101,28 @@ let div = document.querySelector('.out')
 
 // Задание 2 (Вариант 2)
 
-let one = NaN;
-let two = 45;
-let equality = (one == two) ? true : false;
-console.log(equality)
+// let one = NaN;
+// let two = 45;
+// let equality = (one == two) ? true : false;
+// console.log(equality)
+
+// Задание #5-1
+
+// let i = 1;
+// while (i < 51) {
+//         console.log(i);
+//         i++
+// }
+
+// Задание #5-2
+
+// for (i = 50; i > 24; i--){
+//         console.log(i);
+// }
+
+// Задание#5-3
+
+for (let i = 2500; i <= 3000; i++){
+        if (i % 2 == 0) continue;
+        console.log(i);
+}
