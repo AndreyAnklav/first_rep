@@ -129,20 +129,13 @@
 
 // Задание 6-1
 
-// let a = 2;
-// let b = prompt('Введите число 2');
-// switch (+b){
-// 	case a:
+// let defaultVar = 'default';
+// let userInput = prompt('Введите число');
+// switch (true){
+// 	case defaultVar === userInput:
 // 		alert('Да');
 // 		break;
-// 	case 1:
-// 	case 3:
-// 	case 4:
-// 	case 5:
-// 	case 6:
-// 	case 7:
-// 	case 8:
-// 	case 9:
+// 	case defaultVar !== userInput:
 // 		alert('Нет');
 // 		break;
 // 	default:
@@ -180,12 +173,51 @@
 
 // Задание 6-3
 
-let one = null;
-let two = 'Привет, мир!';
-let three = 345678;
-console.log(one ?? two ?? three);
+// let one = null;
+// let two = 'Привет, мир!';
+// let three = 345678;
+// console.log(one ?? two ?? three);
 
+// Задание 7-1
 
+// let fun = document.querySelector('.check');
+// let a = 1;
+// function output(){
+// let b = document.querySelector('.out');
+// b.innerHTML = a;
+// }
+// fun.onclick = output
 
+// Задание 7-1 с выводом значения из input
+
+let inputIn = document.querySelector('.text');
+let lineOutput = document.querySelector('.out');
+document.querySelector(".check").onclick = function output(){
+	lineOutput.innerHTML = inputIn.value;
+}
+
+// задание 7-2
+
+let resultOutput = document.querySelector('.output')
+document.querySelector("#plus").onclick = function plus(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x + y;
+}
+document.querySelector("#minus").onclick = function plus(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x - y;
+}
+document.querySelector("#multiply").onclick = function plus(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x * y;
+}
+document.querySelector("#divide").onclick = function plus(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x / y;
+}
 
 
