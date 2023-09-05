@@ -4,6 +4,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Джава</title>
+    <style>
+        .size{
+            width: 1000px;
+            height: 200px;
+        }
+        .grey{
+            background-color: gray;
+        }
+        .timesNew{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .btnsize{
+            font-size: 30px;
+        }
+    </style>
 </head>
 <body>
     <h1>Джава</h1>
@@ -28,6 +43,25 @@
     </div>
     <br>
     <div class="output"></div>
+    <div class="element" style="background-color: bisque; font-size: 18px;">
+        <p>
+            Многие операторы знакомы нам ещё со школы: сложение +, умножение *, 
+            вычитание - и так далее. В этой главе мы начнём с простых операторов, 
+            а потом сконцентрируемся на специфических для JavaScript аспектах, которые 
+            не проходят в школьном курсе арифметики.Операнд – то, к чему применяется оператор. 
+            Например, в умножении 5 * 2 есть два операнда: левый операнд равен 5, а правый 
+            операнд равен 2. Иногда их называют «аргументами» вместо «операндов».
+        </p>
+    </div>
+    <button class="elementSize">Размеры</button>
+    <div>
+        <p>
+            <button class="btnChange">Стиль кнопки выше</button>
+        </p>
+        <p>
+            <button class="cancel">Отмена серого стиля</button>
+        </p>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

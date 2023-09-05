@@ -190,34 +190,57 @@
 
 // Задание 7-1 с выводом значения из input
 
-let inputIn = document.querySelector('.text');
-let lineOutput = document.querySelector('.out');
-document.querySelector(".check").onclick = function output(){
-	lineOutput.innerHTML = inputIn.value;
-}
+// let inputIn = document.querySelector('.text');
+// let lineOutput = document.querySelector('.out');
+// document.querySelector(".check").onclick = function output(){
+// 	lineOutput.innerHTML = inputIn.value;
+// }
 
 // задание 7-2
 
-let resultOutput = document.querySelector('.output')
-document.querySelector("#plus").onclick = function plus(){
-	let x = +(document.getElementById('num_1').value);
-	let y = +(document.getElementById('num_2').value);
-	resultOutput.innerHTML = x + y;
+// let resultOutput = document.querySelector('.output')
+// document.querySelector("#plus").onclick = function plus(){
+// 	let x = +(document.getElementById('num_1').value);
+// 	let y = +(document.getElementById('num_2').value);
+// 	resultOutput.innerHTML = x + y;
+// }
+// document.querySelector("#minus").onclick = function plus(){
+// 	let x = +(document.getElementById('num_1').value);
+// 	let y = +(document.getElementById('num_2').value);
+// 	resultOutput.innerHTML = x - y;
+// }
+// document.querySelector("#multiply").onclick = function plus(){
+// 	let x = +(document.getElementById('num_1').value);
+// 	let y = +(document.getElementById('num_2').value);
+// 	resultOutput.innerHTML = x * y;
+// }
+// document.querySelector("#divide").onclick = function plus(){
+// 	let x = +(document.getElementById('num_1').value);
+// 	let y = +(document.getElementById('num_2').value);
+// 	resultOutput.innerHTML = x / y;
+// }
+
+// Задание 8-1
+
+const element = document.querySelector('.element');
+const elementSize = document.querySelector('.elementSize');
+elementSize.onclick = function divSize(){
+	element.classList.toggle('size')
 }
-document.querySelector("#minus").onclick = function plus(){
-	let x = +(document.getElementById('num_1').value);
-	let y = +(document.getElementById('num_2').value);
-	resultOutput.innerHTML = x - y;
+
+// Задание 8-2
+
+let btnChange = document.querySelector('.btnChange');
+btnChange.onclick = function changes(){
+	elementSize.classList.toggle('grey');
+	elementSize.classList.toggle('timesNew');
+	elementSize.classList.toggle('btnsize');
 }
-document.querySelector("#multiply").onclick = function plus(){
-	let x = +(document.getElementById('num_1').value);
-	let y = +(document.getElementById('num_2').value);
-	resultOutput.innerHTML = x * y;
-}
-document.querySelector("#divide").onclick = function plus(){
-	let x = +(document.getElementById('num_1').value);
-	let y = +(document.getElementById('num_2').value);
-	resultOutput.innerHTML = x / y;
+// Задание 8-3
+
+let cancel = document.querySelector('.cancel');
+cancel.onclick = function(){
+	elementSize.classList.remove('grey');
 }
 
 
