@@ -198,27 +198,32 @@
 
 // задание 7-2
 
-// let resultOutput = document.querySelector('.output')
-// document.querySelector("#plus").onclick = function plus(){
-// 	let x = +(document.getElementById('num_1').value);
-// 	let y = +(document.getElementById('num_2').value);
-// 	resultOutput.innerHTML = x + y;
-// }
-// document.querySelector("#minus").onclick = function plus(){
-// 	let x = +(document.getElementById('num_1').value);
-// 	let y = +(document.getElementById('num_2').value);
-// 	resultOutput.innerHTML = x - y;
-// }
-// document.querySelector("#multiply").onclick = function plus(){
-// 	let x = +(document.getElementById('num_1').value);
-// 	let y = +(document.getElementById('num_2').value);
-// 	resultOutput.innerHTML = x * y;
-// }
-// document.querySelector("#divide").onclick = function plus(){
-// 	let x = +(document.getElementById('num_1').value);
-// 	let y = +(document.getElementById('num_2').value);
-// 	resultOutput.innerHTML = x / y;
-// }
+let resultOutput = document.querySelector('.output');
+let x = +(document.getElementById('num_1').value);
+let y = +(document.getElementById('num_2').value);
+document.querySelector("#plus").onclick = function add(){
+	// let x = +(document.getElementById('num_1').value);
+	// let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x + y;
+}
+document.querySelector("#minus").onclick = function subtract(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x - y;
+}
+document.querySelector("#multiply").onclick = function multiply(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x * y;
+}
+document.querySelector("#divide").onclick = function divide(){
+	let x = +(document.getElementById('num_1').value);
+	let y = +(document.getElementById('num_2').value);
+	resultOutput.innerHTML = x / y;
+	if(y == 0){
+		resultOutput.innerHTML = 'На 0 делить нельзя!'
+	}
+}
 
 // Задание 8-1
 
@@ -236,6 +241,7 @@ btnChange.onclick = function changes(){
 	elementSize.classList.toggle('timesNew');
 	elementSize.classList.toggle('btnsize');
 }
+
 // Задание 8-3
 
 let cancel = document.querySelector('.cancel');
@@ -243,4 +249,58 @@ cancel.onclick = function(){
 	elementSize.classList.remove('grey');
 }
 
+// Задание 9-1
 
+let qwe = [1,2,3,4,'Значение',6,7,8,9,10];
+let massResult = document.querySelector('.massResult');
+document.querySelector('.mass').onclick = () =>{
+	massResult.innerHTML = qwe[4]
+}
+
+// Задание 9-2
+
+let mas = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18];
+let but = document.querySelector(".but");
+let result = document.querySelector(".result");
+// let cent = document.querySelector(".cent");
+let odd = document.querySelector(".odd");
+but.onclick = function(){
+  document.querySelector(".result").value= ''
+  for(i = 0; i < mas.length; i++){
+    if(i % 2 == 1) continue;
+    // cent.innerHTML += i;
+    result.value += i;
+      // console.log(i)
+  }
+}
+// Задание 9-3
+
+  odd.onclick = function(){
+  document.querySelector(".result").value= ''
+  for(i = 0; i < mas.length; i++){
+    if(i % 2 == 0) continue;
+    // cent.innerHTML += i;
+    result.value += i;
+      // console.log(i)
+  }
+}
+
+// Задание 9-4
+
+let inversion = document.querySelector(".inversion");
+let inversionResult = document.querySelector(".inversionResult");
+let mass2 = [
+  [1,2,3],
+  [4,5,6],
+  [7,8,9]
+]
+inversion.onclick = function(){
+	document.querySelector(".inversionResult").value= ''
+	mass2.splice(0, 3, [3,2,1], [6,5,4], [9,8,7])
+	mass2 = mass2.reverse()
+	for(i = 0; i < mass2.length; i++)
+	  for(k = 0; k < mass2[i].length; k++){
+	// console.log(mass2[i][k])
+	inversionResult.value += mass2[i][k]
+	}
+}

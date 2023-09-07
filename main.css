@@ -1,0 +1,27 @@
+.but{
+    font-size: 20px;
+  }
+  .cent{
+    text-align: center;
+    padding: 20px;
+  }
+  .odd{
+    font-size: 20px;
+  }
+  .size{
+    width: 1000px;
+    height: 200px;
+}
+.grey{
+    background-color: gray;
+}
+.timesNew{
+    font-family: 'Times New Roman', Times, serif;
+}
+.btnsize{
+    font-size: 30px;
+}
+h2{
+    font-size: 30px; 
+    text-align: center;
+}
