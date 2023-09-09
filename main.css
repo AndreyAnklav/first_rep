@@ -4,6 +4,7 @@
   .cent{
     text-align: center;
     padding: 20px;
+    
   }
   .odd{
     font-size: 20px;
@@ -24,4 +25,16 @@
 h2{
     font-size: 30px; 
     text-align: center;
+}
+.img{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 20px;
+}
+.flex{
+  display: flex;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
 }
