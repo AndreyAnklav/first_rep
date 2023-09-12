@@ -307,24 +307,96 @@
 
 // Задание 10
 
-let img = document.querySelector(".img");
-let name = document.querySelector(".name");
-let surname = document.querySelector(".surname");
-let age = document.querySelector(".age");
-let phone = document.querySelector(".phone");
-let email = document.querySelector(".email");
-let cent = document.querySelector(".cent");
-for(i = 0; i < 3; i++){
-fetch('https://randomuser.me/api')
-.then(function(res){return res.json()})
-.then(function(data){
-	console.log(data);
-	img.innerHTML += `<img src=${data.results[0].picture.large}>`
-	name.innerHTML += data.results[0].name.first + " ";
-	surname.innerHTML += data.results[0].name.last + " ";
-	age.innerHTML += data.results[0].dob.age + " ";
-	phone.innerHTML += data.results[0].cell + " ";
-	email.innerHTML += data.results[0].email + " ";
-})
+// let img = document.querySelector(".img");
+// let name = document.querySelector(".name");
+// let surname = document.querySelector(".surname");
+// let age = document.querySelector(".age");
+// let phone = document.querySelector(".phone");
+// let email = document.querySelector(".email");
+// let cent = document.querySelector(".cent");
+
+// let clientsContainer = document.querySelector('.clients')
+// for(let i = 0; i < 3; i++) {
+// 	fetch('https://randomuser.me/api')
+// 		.then(function(res) {
+// 			return res.json()
+// 		})
+// 		.then(function(data) {
+
+	// console.log(data);
+	// img.innerHTML += `<img src=${data.results[0].picture.large}>`
+	// name.innerHTML += data.results[0].name.first + " ";
+	// surname.innerHTML += data.results[0].name.last + " ";
+	// age.innerHTML += data.results[0].dob.age + " ";
+	// phone.innerHTML += data.results[0].cell + " ";
+	// email.innerHTML += data.results[0].email + " ";
+
+// 	let clientCard = document.createElement('div');
+// 			clientCard.className = 'flex';
+// 			clientCard.style.fontSize = '30px';
+// 			clientCard.innerHTML = `
+// 				<div class="img"><img src=${data.results[0].picture.large}></div>
+// 				<div class="name">${data.results[0].name.first}</div>
+// 				<div class="surname">${data.results[0].name.last}</div>
+// 				<div class="age">${data.results[0].dob.age}</div>
+// 				<div class="phone">${data.results[0].cell}</div>
+// 				<div class="email">${data.results[0].email}</div>
+// 			`;
+// 			clientsContainer.appendChild(clientCard);
+// 		});
+// }
+
+// fetch('https://randomuser.me/api')
+// 	.then((response) => response.json())
+// 	.then((data) => {
+// 		let myArray = data.someProperty;
+// 		console.log(myArray);
+// 	})
+
+// Задание 11-1
+
+let letters = new Set()
+letters.add('e')
+letters.add('r')
+letters.add('i')
+letters.add('k')
+letters.add('t')
+letters.add('h')
+letters.add('e')
+letters.add('b')
+letters.add('e')
+letters.add('s')
+letters.add('t')
+console.log(letters);
+
+// Задание 11-2
+
+let btn1 = document.querySelector(".btn1");
+btn1.onclick=function(){
+	letters.add(document.querySelector(".letters1").value);
+  	console.log(letters);
 }
 
+// Задание 11-3
+
+let btn2 = document.querySelector(".btn2");
+let result = document.querySelector(".result");
+
+btn2.onclick=function(){
+  let lettersExist = letters.has(document.querySelector(".letters2").value)
+	result.innerHTML = lettersExist
+}
+
+// Задание 11-4
+
+let massivOfNumbers = [1,2,3,4,5,6,7,8,9,10]
+let btn3 = document.querySelector(".btn3")
+let letters3 = document.querySelector(".letters3")
+btn3.onclick = function(){
+	letters3.value = ''
+	for (let key of massivOfNumbers) {
+		if(key > 5)
+    letters3.value += key
+	// console.log(key);
+  }
+}
