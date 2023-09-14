@@ -355,48 +355,83 @@
 
 // Задание 11-1
 
-let letters = new Set()
-letters.add('e')
-letters.add('r')
-letters.add('i')
-letters.add('k')
-letters.add('t')
-letters.add('h')
-letters.add('e')
-letters.add('b')
-letters.add('e')
-letters.add('s')
-letters.add('t')
-console.log(letters);
+// let letters = new Set()
+// letters.add('e')
+// letters.add('r')
+// letters.add('i')
+// letters.add('k')
+// letters.add('t')
+// letters.add('h')
+// letters.add('e')
+// letters.add('b')
+// letters.add('e')
+// letters.add('s')
+// letters.add('t')
+// console.log(letters);
 
 // Задание 11-2
 
-let btn1 = document.querySelector(".btn1");
-btn1.onclick=function(){
-	letters.add(document.querySelector(".letters1").value);
-  	console.log(letters);
-}
+// let btn1 = document.querySelector(".btn1");
+// btn1.onclick=function(){
+// 	letters.add(document.querySelector(".letters1").value);
+//   	console.log(letters);
+// }
 
 // Задание 11-3
 
-let btn2 = document.querySelector(".btn2");
-let result = document.querySelector(".result");
+// let btn2 = document.querySelector(".btn2");
+// let result = document.querySelector(".result");
 
-btn2.onclick=function(){
-  let lettersExist = letters.has(document.querySelector(".letters2").value)
-	result.innerHTML = lettersExist
-}
+// btn2.onclick=function(){
+//   let lettersExist = letters.has(document.querySelector(".letters2").value)
+// 	result.innerHTML = lettersExist
+// }
 
 // Задание 11-4
 
-let massivOfNumbers = [1,2,3,4,5,6,7,8,9,10]
-let btn3 = document.querySelector(".btn3")
-let letters3 = document.querySelector(".letters3")
-btn3.onclick = function(){
-	letters3.value = ''
-	for (let key of massivOfNumbers) {
-		if(key > 5)
-    letters3.value += key
-	// console.log(key);
-  }
+// let massivOfNumbers = [1,2,3,4,5,6,7,8,9,10]
+// let btn3 = document.querySelector(".btn3")
+// let letters3 = document.querySelector(".letters3")
+// btn3.onclick = function(){
+// 	letters3.value = ''
+// 	for (let key of massivOfNumbers) {
+// 		if(key > 5)
+//     letters3.value += key
+// 	// console.log(key);
+//   }
+// }
+
+// Задание 12-1
+
+let width = 10;
+let height = 1;
+document.querySelector('.big').onclick = function() {
+	document.querySelector('.big').style.width = width + '15px'
+	document.querySelector('.big').style.height = height + '15px'
 }
+
+// Задание 12-2
+
+document.querySelector('.big').ondblclick = function() {
+	console.log(document.querySelector('.big').innerHTML);
+}
+
+// Задание 12-3
+
+document.querySelector('.img').onclick = function() {
+	document.querySelector('.img').src="imgs/Лавандовое поле (1920x1080).jpg"
+}
+
+// Задание 12-4
+
+let btn = document.querySelector('.btn');
+let inp = document.querySelector('.inp');
+btn.onclick = function (){
+	if(+inp.value){
+	 console.log(false)
+    } else {
+	 console.log(true)
+    } 
+ }
+
+
