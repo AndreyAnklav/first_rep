@@ -403,35 +403,84 @@
 
 // Задание 12-1
 
-let width = 10;
-let height = 1;
-document.querySelector('.big').onclick = function() {
-	document.querySelector('.big').style.width = width + '15px'
-	document.querySelector('.big').style.height = height + '15px'
-}
+// let width = 10;
+// let height = 1;
+// document.querySelector('.big').onclick = function() {
+// 	document.querySelector('.big').style.width = width + '15px'
+// 	document.querySelector('.big').style.height = height + '15px'
+// }
 
 // Задание 12-2
 
-document.querySelector('.big').ondblclick = function() {
-	console.log(document.querySelector('.big').innerHTML);
-}
+// document.querySelector('.big').ondblclick = function() {
+// 	console.log(document.querySelector('.big').innerHTML);
+// }
 
 // Задание 12-3
 
-document.querySelector('.img').onclick = function() {
-	document.querySelector('.img').src="imgs/Лавандовое поле (1920x1080).jpg"
-}
+// document.querySelector('.img').onclick = function() {
+// 	document.querySelector('.img').src="imgs/Лавандовое поле (1920x1080).jpg"
+// }
 
 // Задание 12-4
 
-let btn = document.querySelector('.btn');
-let inp = document.querySelector('.inp');
-btn.onclick = function (){
-	if(+inp.value){
-	 console.log(false)
-    } else {
-	 console.log(true)
-    } 
- }
+// let btn = document.querySelector('.btn');
+// let inp = document.querySelector('.inp');
+// btn.onclick = function (){
+// 	if(+inp.value){
+// 	 console.log(false)
+//     } else {
+// 	 console.log(true)
+//     } 
+//  }
+
+// document.querySelector('.btn').onclick = function (){
+// 	if(+document.querySelector('.inp').value){
+// 	 console.log(false)
+//     } else {
+// 	 console.log(true)
+//     } 
+//  }
+
+// Задание 13
+
+// localStorage.setItem('data', 5);
+// console.log(localStorage.getItem('data'));
+
+// let a = [1,2,3];
+// localStorage.setItem('data', JSON.stringify(a));
+// let b = localStorage.getItem('data');
+// b = JSON.parse(b);
+// localStorage.clear();
+// console.log(b);
+// console.log(b[2]);
+// console.log(typeof b);
+
+// console.log(1);
+
+// setTimeout(() =>{
+// 	console.log(2);
+// }, 1000);
+// setTimeout(() =>{
+// 	console.log(4);
+// }, 2000);
+
+// console.log(3);
+
+let xhttp = new XMLHttpRequest()
+xhttp.onreadystatechange = function(){
+	if(this.readyState == 4 && this.status == 200){
+		myfunc(this.responseText)
+	}
+}
+
+xhttp.open('GET', "https://automarine25.ru/", true)
+xhttp.send()
+
+function myfunc(data){
+	console.log(data);
+}
+
+
 
 
